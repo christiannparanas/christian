@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #fffaf5;
+}
+
+.main-container {
+
+
+
+  nav {
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    padding: 20px 20px 15px;
+    transition: all 0.3s ease;
+
+  
+    .menu-btn {
+      -webkit-tap-highlight-color: transparent;
+      float: right;
+      --box-shadow-color: rgba(93, 58, 197, 0.3);
+      width: 40px;
+      height: 40px;
+      position: relative;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      cursor: pointer;
+    }
+  
+    .menu-btn__burger,
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      width: 40px;
+      height: 4px;
+  
+      border-radius: 5px;
+      background-color: #5d3ac5;
+      box-shadow: 0 2px 5px var(--box-shadow-color);
+  
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      content: "";
+      position: absolute;
+    }
+    .menu-btn__burger::before {
+      transform: translateY(-12px);
+    }
+    .menu-btn__burger::after {
+      transform: translateY(12px);
+    }
+  
+    /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+      transform: translateX(-50px);
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .menu-btn.open .menu-btn__burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menu-btn.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
+
+
+
+  .home-page {
+    padding: 20px 20px 30px;
+    height: fit-content;
+  
+    .me {
+      margin-top: 80px;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+  
+      img {
+        width: 150px;
+        border-radius: 50%;
+        border: 5px solid #432a8f;
+        background-color: #432a8f;
+      }
+    }
+  
+    .msg {
+      color: #1c2137;
+      padding: 20px 0;
+  
+      .s1,
+      .s2,
+      .s3 {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 12px;
+      }
+  
+      .s1 {
+        font-size: 15px;
+      }
+  
+      .s2 {
+        font-size: 30px;
+        font-weight: 900;
+      }
+  
+      .s3 {
+        font-size: 15px;
+      }
+    }
+  
+    .options {
+      margin-top: 20px;
+  
+      .see,
+      .cv {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 18px;
+        margin-bottom: 12px;
+        border-radius: 25px;
+        font-weight: 800;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+  
+      .see {
+        background-color: #432a8f;
+        color: #fff;
+  
+        &:hover {
+          color: #1c2137;
+          padding: 13px;
+          border: 5px solid #432a8f;
+          background-color: #fff;
+        }
+      }
+  
+      .cv {
+        border: 5px solid #432a8f;
+        position: relative;
+        padding: 13px;
+        color: #432a8f;
+  
+        i {
+          font-size: 20px;
+          color: #432a8f;
+        }
+  
+        &:hover {
+          padding: 13px;
+  
+        }
+      }
+    }
+  
+    .can {
+      margin-top: 80px;
+      text-align: center;
+  
+      .web,
+      .ui {
+        background-color: #fff;
+        border-radius: 15px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        padding: 30px 20px;
+        margin-bottom: 15px;
+  
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  
+        .title {
+          margin-bottom: 15px;
+          font-size: 17px;
+          font-weight: 200;
+        }
+  
+        img {
+          grid-row: 1/3;
+          margin-top: 18px;
+          padding-left: 10px;
+        }
+  
+        .ux {
+          width: 70px;
+        }
+  
+        .dis {
+          text-align: center;
+          grid-row-start: 2;
+          grid-column-start: 2;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
