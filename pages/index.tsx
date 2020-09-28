@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 
 import Nav from "../components/Nav";
+import Footer  from '../components/Footer'
 
 const Home = () => {
   const [info] = useState(
@@ -69,6 +70,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
